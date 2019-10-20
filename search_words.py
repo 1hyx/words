@@ -30,12 +30,15 @@ def test_network():
 
 
 def get_words_meaning():
-    base_url = 'http://iciba.com/'
+# todo 增加一个方法可以自定义增加查询的网址，写一个class， 自增加的网址对应的目标位置也要做定义
+    base_url = ['http://iciba.com/','https://translate.google.cn/']
     with request.urlopen('http://python.org/') as response:
         html = response.read()
         print(html)
 
 
+ 
+        
 if __name__ == '__main__':
     # test_network()
     get_words_meaning()
